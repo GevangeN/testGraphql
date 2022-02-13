@@ -1,0 +1,13 @@
+type Query {
+    HelloWorld (
+        name: [string]
+    ): HelloWorld @resolver(class: "Test\\Graphql\\Model\\Resolver\\HelloWorld")
+}
+
+type HelloWorld {
+    item: [Answer]
+}
+
+type Answer {
+    answer: String
+}
